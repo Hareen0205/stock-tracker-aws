@@ -1,4 +1,4 @@
-# 📈 Stock Watch: AI-Powered Serverless Stock Sentinel
+# 📈 Stock Watch: AI-Powered Serverless Stock Watch
 
 
 ## The System
