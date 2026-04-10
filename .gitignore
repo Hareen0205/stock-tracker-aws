@@ -1,0 +1,10 @@
+# Ignore AWS credentials and local config
+.aws/
+.env
+.streamlit/
+
+# Ignore Python "junk" files
+__pycache__/
+*.pyc
+venv/
+.DS_Store
