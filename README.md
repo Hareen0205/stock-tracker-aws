@@ -1,19 +1,27 @@
-# 📈 Stock Watch: AI-Powered Serverless Stock Watch
+# 📈 Market Watch: AI-Powered Serverless Sentinel
 
+A proactive, cloud-native monitoring system that bridges global market data (US Tech & Bursa Malaysia) with AI-driven sentiment analysis. 
 
-## The System
-I architected this end-to-end data pipeline to demonstrate cloud scalability and event-driven design.
-* **Serverless Compute:** AWS Lambda (Python 3.12) automated via EventBridge.
-* **NoSQL Storage:** Amazon DynamoDB time-series schema (Sydney Region).
-* **AI Intelligence:** Integrated TextBlob NLP for real-time news sentiment analysis.
-* **Automated Alerts:** AWS SNS configured for instant email notifications on price drops.
+## 🏗️ System Architecture
+The system is built entirely on **AWS Serverless Architecture** to ensure scalability and cost-efficiency:
+* **Data Ingestion:** Python-based **AWS Lambda** functions triggered by **EventBridge** every 15 minutes.
+* **Intelligence:** **TextBlob NLP** integrated into the pipeline for real-time news sentiment analysis.
+* **Storage:** **Amazon DynamoDB** (NoSQL) optimized for time-series financial data.
+* **Alerting:** **AWS SNS** for instant email notifications based on custom price thresholds.
+* **Hosting:** Publicly deployed **Streamlit** dashboard hosted on a **Linux EC2 (t3.micro)** instance.
 
-## Tech Stack
-- **Cloud:** AWS (Lambda, DynamoDB, SNS, EventBridge)
-- **Frontend:** Streamlit with Custom CSS 
-- **Data:** Python, Pandas, Plotly, Yahoo Finance API
+## 🚀 Live Demo
+Check out the live dashboard here: `http://54.252.165.148:8501` 
+*(Note: Hosted on AWS Free Tier)*
 
-## Engineering Highlights
-- **Performance:** Optimized DynamoDB reads by replacing `Scan` with `Query` operations.
-- **Resilience:** Implemented custom User-Agent headers to bypass API rate-limiting.
-- **Cost-Efficiency:** Entire architecture runs within the AWS Free Tier ($0.00/mo).
+## 🛠️ Tech Stack
+* **Language:** Python 3.11
+* **Cloud:** AWS (Lambda, DynamoDB, SNS, EventBridge, EC2)
+* **Libraries:** Boto3, Pandas, Plotly, Streamlit, TextBlob
+* **OS:** Ubuntu 24.04 LTS
+
+## 🔧 Installation & Setup
+1. Clone the repo: `git clone https://github.com/Hareen0205/stock-tracker-aws.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Configure AWS CLI: `aws configure`
+4. Run locally: `streamlit run src/app.py`
